@@ -25,6 +25,7 @@ print the characters and its huffmancode
 ## Program:
 
 NAME : SANGAVI SURESH
+
 REGISTER NUMBER: 212222230130
 
 ``` Python
