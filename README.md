@@ -30,7 +30,7 @@ REGISTER NUMBER: 212222230130
 
 ``` Python
 
-# Get the input String
+### Get the input String
 
 string = 'DIGITAL IMAGE'
 class NodeTree(object):
@@ -45,7 +45,7 @@ class NodeTree(object):
         return '%s %s' %(self.left,self.right)
 
 
-# Create tree nodes
+### Create tree nodes
 
 def huffman_code_tree (node, left=True, binString=''):
     if type(node) is str:
@@ -56,7 +56,7 @@ def huffman_code_tree (node, left=True, binString=''):
     d.update(huffman_code_tree (r, False, binString + '1'))
     return d
 
-# Main function to implement huffman coding
+### Main function to implement huffman coding
 
 freq = {}
 for c in string:
@@ -67,7 +67,7 @@ for c in string:
 freq = sorted(freq.items(), key=lambda x: x[1], reverse=True)
 nodes=freq
 
-# Calculate frequency of occurrence
+### Calculate frequency of occurrence
 
 while len(nodes)>1:
     (key1,c1)=nodes[-1]
@@ -78,7 +78,7 @@ while len(nodes)>1:
     nodes = sorted (nodes, key=lambda x: x[1], reverse=True)
 
 
-# Print the characters and its huffmancode
+### Print the characters and its huffmancode
 
 huffmanCode=huffman_code_tree(nodes[0][0])
 print(' Char | Huffman code ') 
